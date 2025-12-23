@@ -1,0 +1,371 @@
+.panel {
+    background: linear-gradient(135deg, rgba(40, 40, 70, 0.95), rgba(25, 25, 50, 0.98));
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow:
+        0 16px 48px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    width: 100%;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-8px);
+    }
+
+    40% {
+        transform: translateX(8px);
+    }
+
+    60% {
+        transform: translateX(-8px);
+    }
+
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    margin: 4px 0 0;
+}
+
+/* Number Buttons Grid */
+.numbersGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.numberBtn {
+    position: relative;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(145deg, #4a4a7a, #3a3a5a);
+    border: 2px solid rgba(0, 255, 136, 0.4);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-family: 'Orbitron', monospace;
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.numberBtn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.numberBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.numberUsed {
+    background: linear-gradient(145deg, #2a4a3a, #1a3a2a) !important;
+    border-color: rgba(0, 200, 100, 0.6) !important;
+    opacity: 0.6;
+    transform: scale(0.95);
+}
+
+.checkMark {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    font-size: 0.75rem;
+    color: #00ff88;
+}
+
+/* Usage Indicator */
+.usageIndicator {
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.allUsed {
+    color: #00ff88;
+    font-weight: 600;
+}
+
+/* Expression Display */
+.expressionDisplay {
+    margin-bottom: 12px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', monospace;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: #00ff88;
+    outline: none;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: rgba(0, 255, 136, 0.5);
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+}
+
+/* Operator Buttons Grid */
+.operatorsGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.opBtn {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: rgba(60, 60, 100, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.opBtn:active:not(:disabled) {
+    transform: scale(0.92);
+    background: rgba(80, 80, 120, 0.9);
+}
+
+.opBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.opAdd {
+    background: linear-gradient(135deg, #2d5a3d, #1d3a2d);
+    border-color: rgba(0, 200, 100, 0.4);
+}
+
+.opSub {
+    background: linear-gradient(135deg, #5a3d2d, #3a2d1d);
+    border-color: rgba(200, 100, 50, 0.4);
+}
+
+.opMul {
+    background: linear-gradient(135deg, #3d2d5a, #2d1d3a);
+    border-color: rgba(150, 100, 200, 0.4);
+}
+
+.opDiv {
+    background: linear-gradient(135deg, #2d3d5a, #1d2d3a);
+    border-color: rgba(100, 150, 200, 0.4);
+}
+
+.opParen {
+    background: linear-gradient(135deg, #4a4a5a, #3a3a4a);
+}
+
+/* Action Row */
+.actionRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.clearBtn,
+.backBtn {
+    padding: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(100, 60, 60, 0.6);
+    border: 1px solid rgba(255, 100, 100, 0.3);
+    border-radius: 10px;
+    color: #ff8888;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.clearBtn:active:not(:disabled),
+.backBtn:active:not(:disabled) {
+    transform: scale(0.95);
+    background: rgba(120, 70, 70, 0.8);
+}
+
+.submitBtn {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00ff88, #00cc66);
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    text-transform: uppercase;
+}
+
+.submitBtn:active:not(:disabled) {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.feedback {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success {
+    background: rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(0, 255, 136, 0.4);
+    color: #00ff88;
+}
+
+.error {
+    background: rgba(255, 68, 68, 0.2);
+    border: 1px solid rgba(255, 68, 68, 0.4);
+    color: #ff6666;
+}
+
+.hint {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .panel {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .numbersGrid {
+        gap: 6px;
+    }
+
+    .numberBtn {
+        height: 48px;
+        font-size: 1.3rem;
+        border-radius: 10px;
+    }
+
+    .operatorsGrid {
+        gap: 4px;
+    }
+
+    .opBtn {
+        height: 40px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+    }
+
+    .input {
+        padding: 10px 12px;
+        font-size: 1.1rem;
+    }
+
+    .actionRow {
+        gap: 6px;
+    }
+
+    .clearBtn,
+    .backBtn {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .submitBtn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .usageIndicator,
+    .hint {
+        font-size: 0.75rem;
+    }
+}
