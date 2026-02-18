@@ -273,7 +273,7 @@ export default function Home() {
       </div>
 
       <footer className={styles.footer}>
-        <p>🎮 24 Snake Math - Works on mobile!</p>
+        <p>🎮 24 Fun Math - Works on mobile!</p>
       </footer>
     </main>
   );
