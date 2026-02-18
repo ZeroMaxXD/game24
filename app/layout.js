@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "24 Snake Math - Puzzle Game",
+  title: "24 Fun Math - Puzzle Game",
   description: "Combine Snake gameplay with the classic 24 math puzzle game. Eat fruit, solve puzzles, beat the timer!",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
 };
