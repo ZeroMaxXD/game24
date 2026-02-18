@@ -192,7 +192,7 @@ export default function Home() {
       <header className={styles.header}>
         <h1 className={styles.title}>
           <span className={styles.titleNumber}>24</span>
-          <span className={styles.titleText}>Snake Math</span>
+          <span className={styles.titleText}>Fun Math</span>
         </h1>
       </header>
 
