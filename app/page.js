@@ -221,7 +221,7 @@ export default function Home() {
           {gameState === 'start' && (
             <div className={styles.overlay}>
               <div className={styles.startScreen}>
-                <h2>🐍 24 Snake Math 🧮</h2>
+                <h2>🐍 24 Fun Math 🧮</h2>
                 <p>Eat the fruit to get a math puzzle!</p>
                 <p>Make <strong>24</strong> using all 4 numbers</p>
                 <p>You have <strong>2 minutes</strong> per puzzle</p>
